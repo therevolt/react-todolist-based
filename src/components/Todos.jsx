@@ -1,20 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Todo from "./Todo";
 
-const ListItem = () => {
-  const todos = [
-    {
-      text: "Belajar React"
-    }
-  ];
-
+const ListItem = ({ todos }) => {
   return (
     <section className="todos">
-      {todos.map((item) => {
-        return <Todo text={item.text} />;
+      {todos.map((todos) => {
+        return <Todo key={todos.text} text={todos.text} />;
       })}
     </section>
   );
+};
+
+ListItem.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
 };
 
 export default ListItem;
