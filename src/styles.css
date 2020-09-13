@@ -32,7 +32,7 @@ html {
 
 .container {
   width: 600px;
-  height: auto;
+  max-height: fit-content;
   margin-top: 35%;
   background-color: wheat;
   border-radius: 5px;
@@ -83,13 +83,14 @@ html {
 
 .add-form {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .add-input {
   background: unset;
   border: unset;
   padding: 0;
+  margin-right: 10px;
   flex: 1;
   border-bottom: 1px solid var(--main-red-color);
   outline: unset;
@@ -99,13 +100,19 @@ html {
 
 .add-btn {
   font-size: 1.8rem;
-  font-family: "Dosis", sans-serif;
+  font-family: "Bugge", sans-serif;
+  color: #2d2d2d;
+  font-weight: 800;
   padding: 0;
   padding-right: unset;
   cursor: pointer;
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.add-btn:hover {
+  text-shadow: 1px 1px 2px;
 }
 
 .todos {
