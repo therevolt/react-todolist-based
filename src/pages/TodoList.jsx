@@ -6,16 +6,19 @@ import TodoList from "../components/Todos";
 
 export default function App() {
   const [todos, setTodos] = useState([]);
+  const [showAdd, setShowAdd] = useState(true);
 
   const addTodo = (value) => {
     const addedTodo = [...todos, { text: value }];
     setTodos(addedTodo);
   };
 
+  const showAddToggle = () => setShowAdd(!showAdd);
+
   return (
     <Paper>
-      <Header />
-      <Form addTodo={addTodo} />
+      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
+      <Form addTodo={addTodo} showAdd={showAdd} />
       <TodoList todos={todos} />
     </Paper>
   );

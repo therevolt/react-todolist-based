@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-const Form = ({ addTodo }) => {
+const Form = ({ addTodo, showAdd }) => {
   const [value, setValue] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -15,13 +15,14 @@ const Form = ({ addTodo }) => {
   };
 
   return (
-    <section className="add">
+    <section className="add" hidden={showAdd}>
       <form className="add-form" onSubmit={handleFormSubmit}>
         <input
           type="text"
           className="add-input"
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          maxLength="57"
         />
         <button className="add-btn">Submit</button>
       </form>
@@ -30,6 +31,7 @@ const Form = ({ addTodo }) => {
 };
 
 Form.propTypes = {
-  addTodo: PropTypes.func.isRequired
+  addTodo: PropTypes.func.isRequired,
+  showAdd: PropTypes.bool.isRequired
 };
 export default Form;
