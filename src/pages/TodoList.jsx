@@ -9,7 +9,13 @@ export default function App() {
   const [showAdd, setShowAdd] = useState(true);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value }];
+    const addedTodo = [...todos, { text: value, isCompleted: false }];
+    setTodos(addedTodo);
+  };
+
+  const completeTodo = (index) => {
+    const addedTodo = [...todos];
+    addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
     setTodos(addedTodo);
   };
 
@@ -19,7 +25,7 @@ export default function App() {
     <Paper>
       <Header showAddToggle={showAddToggle} showAdd={showAdd} />
       <Form addTodo={addTodo} showAdd={showAdd} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} completeTodo={completeTodo} />
     </Paper>
   );
 }
