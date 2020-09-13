@@ -68,6 +68,16 @@ html {
   padding: 16px;
 }
 
+.header-btn-disable {
+  font-size: 1.8rem;
+  font-family: "Bungee", sans-serif;
+  background: unset;
+  border: unset;
+  outline: unset;
+  cursor: pointer;
+  padding: 16px;
+}
+
 .header-btn:active {
   text-shadow: 1px 1px 2px;
 }
@@ -135,4 +145,22 @@ html {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+}
+
+.todos-none {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-top: 20px;
+}
+
+.todos-none p {
+  font-family: "Dosis", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  opacity: 30%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }

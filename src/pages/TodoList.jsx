@@ -19,11 +19,17 @@ export default function App() {
     setTodos(addedTodo);
   };
 
+  const clearTodos = () => setTodos([]);
   const showAddToggle = () => setShowAdd(!showAdd);
 
   return (
     <Paper>
-      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
+      <Header
+        showAddToggle={showAddToggle}
+        showAdd={showAdd}
+        clearTodos={clearTodos}
+        todos={todos}
+      />
       <Form addTodo={addTodo} showAdd={showAdd} />
       <TodoList todos={todos} completeTodo={completeTodo} />
     </Paper>
