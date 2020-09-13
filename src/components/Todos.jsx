@@ -5,8 +5,8 @@ import Todo from "./Todo";
 const ListItem = ({ todos }) => {
   return (
     <section className="todos">
-      {todos.map((todos) => {
-        return <Todo key={todos.text} text={todos.text} />;
+      {todos.map((todos, index) => {
+        return <Todo key={index} text={todos.text} />;
       })}
     </section>
   );

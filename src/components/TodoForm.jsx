@@ -10,8 +10,7 @@ const Form = ({ addTodo }) => {
       alert("ToDo Kosong!");
       return;
     }
-
-    alert(value);
+    addTodo(value);
     setValue("");
   };
 
