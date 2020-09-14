@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
+import style from "./button.module.css";
 
 const Button = ({ text, onClick, color, disabled, align }) => {
-  const classNames = [
-    "header-btn",
-    color === "black" && "main-black-color",
-    color === "red" && "main-red-color",
-    align === "left" && "align-left",
-    align === "right" && "align-right"
-  ].join(" ");
+  const classNames = cx(style.headerBtn, {
+    [style.mainRedColor]: color === "red",
+    [style.alignLeft]: align === "left",
+    [style.alignRight]: align === "right"
+  });
 
   if (disabled) {
     return (
