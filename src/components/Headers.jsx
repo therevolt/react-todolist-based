@@ -1,32 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "./Button";
 
 const Header = ({ showAddToggle, showAdd, clearTodos, todos }) => {
-  if (todos.length === 0) {
-    return (
-      <section className="header">
-        <button className="header-btn" onClick={showAddToggle}>
-          {showAdd ? "Add" : "Finish"}
-        </button>
-        <h1 className="header-title">ToDo List</h1>
-        <button className="header-btn-disable" onClick={clearTodos} disabled>
-          Clear
-        </button>
-      </section>
-    );
-  } else {
-    return (
-      <section className="header">
-        <button className="header-btn" onClick={showAddToggle}>
-          {showAdd ? "Add" : "Finish"}
-        </button>
-        <h1 className="header-title">ToDo List</h1>
-        <button className="header-btn main-red-color" onClick={clearTodos}>
-          Clear
-        </button>
-      </section>
-    );
-  }
+  return (
+    <section className="header">
+      <Button
+        text={showAdd ? "Add" : "Finish"}
+        onClick={showAddToggle}
+        align="left"
+      />
+      <h1 className="header-title">ToDo List</h1>
+      <Button
+        text="Clear"
+        onClick={clearTodos}
+        disabled={todos.length === 0 ? true : false}
+        color={todos.length === 0 ? "black" : "red"}
+        align="right"
+      />
+    </section>
+  );
 };
 
 Header.propTypes = {

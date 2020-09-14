@@ -10,6 +10,14 @@
   color: var(--main-red-color);
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 html {
   font-size: 10px;
 }
@@ -49,26 +57,19 @@ html {
 .header {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .header-title {
-  flex: 1;
+  /* flex: 1; */
+  width: 52%;
   text-align: center;
   font-size: 3.6rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .header-btn {
-  font-size: 1.8rem;
-  font-family: "Bungee", sans-serif;
-  background: unset;
-  border: unset;
-  outline: unset;
-  cursor: pointer;
-  padding: 16px;
-}
-
-.header-btn-disable {
+  widows: 24%;
   font-size: 1.8rem;
   font-family: "Bungee", sans-serif;
   background: unset;

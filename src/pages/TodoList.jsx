@@ -19,7 +19,7 @@ export default function App() {
     setTodos(addedTodo);
   };
 
-  const clearTodos = () => setTodos([]);
+  const clearTodos = () => showAdd && setTodos([]);
   const showAddToggle = () => setShowAdd(!showAdd);
 
   return (
