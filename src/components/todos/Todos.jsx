@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Todo from "./Todo";
-
+import Todo from "../todo/Todo";
+import styles from "./todos.module.css";
 const ListItem = ({ todos, completeTodo }) => {
   if (todos.length === 0) {
     return (
-      <section className="todos-none">
+      <section className={styles.todosNone}>
         <p>Yuk Tambahkan ToDo mu!</p>
         <p>Tekan ADD Dikiri Atas, Dan Tuliskan ToDo mu</p>
         <p>Lalu Submit!</p>
@@ -14,7 +14,7 @@ const ListItem = ({ todos, completeTodo }) => {
     );
   } else {
     return (
-      <section className="todos">
+      <section className={styles.todos}>
         {todos.map((todos, index) => {
           return (
             <Todo

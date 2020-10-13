@@ -1,0 +1,23 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+}
+
+.todosNone {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-top: 20px;
+}
+
+.todosNone p {
+  font-family: "Dosis", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  opacity: 30%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}

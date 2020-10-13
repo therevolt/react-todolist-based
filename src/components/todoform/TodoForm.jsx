@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import styles from "./todoform.module.css";
+
 const Form = ({ addTodo, showAdd }) => {
   const [value, setValue] = useState("");
 
@@ -15,16 +17,16 @@ const Form = ({ addTodo, showAdd }) => {
   };
 
   return (
-    <section className="add" hidden={showAdd}>
-      <form className="add-form" onSubmit={handleFormSubmit}>
+    <section className={styles.add} hidden={showAdd}>
+      <form className={styles.addForm} onSubmit={handleFormSubmit}>
         <input
           type="text"
-          className="add-input"
+          className={styles.addInput}
           value={value}
           onChange={(e) => setValue(e.target.value)}
           maxLength="57"
         />
-        <button className="add-btn">Submit</button>
+        <button className={styles.addBtn}>Submit</button>
       </form>
     </section>
   );

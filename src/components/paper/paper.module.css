@@ -1,0 +1,16 @@
+.container {
+  width: 600px;
+  height: fit-content;
+  background-color: wheat;
+  border-radius: 5px;
+  padding: 32px;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #484848;
+  height: 100%;
+  min-height: 600px;
+  justify-content: space-between;
+}
