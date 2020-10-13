@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Paper from "../components/Paper";
-import Header from "../components/Headers";
-import Form from "../components/TodoForm";
-import TodoList from "../components/Todos";
+import Paper from "../components/paper/Paper";
+import Header from "../components/header/Headers";
+import Form from "../components/todoform/TodoForm";
+import TodoList from "../components/todos/Todos";
 
 export default function App() {
   const [todos, setTodos] = useState([]);
